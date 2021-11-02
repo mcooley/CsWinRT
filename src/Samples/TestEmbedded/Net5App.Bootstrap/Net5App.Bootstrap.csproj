@@ -3,6 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
+    <Platforms>AnyCPU;x64;x86</Platforms>
   </PropertyGroup>
 
 
@@ -22,7 +23,7 @@
     <ProjectReference Include="..\C++ Components\Gamma\Gamma.vcxproj" />
   </ItemGroup>
 
-  <ItemGroup Condition="!($([MSBuild]::GetTargetFrameworkVersion('$(TargetFramework)')) >= 5)">
+  <ItemGroup Condition="!($([MSBuild]::GetTargetFrameworkVersion('$(TargetFramework)')) &gt;= 5)">
     <PackageReference Include="System.Memory" Version="4.5.4" />
     <PackageReference Include="System.Runtime.Extensions" Version="4.3.1" />
   </ItemGroup>
