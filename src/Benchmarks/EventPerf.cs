@@ -15,6 +15,7 @@ namespace Benchmarks
         [GlobalSetup]
         public void Setup()
         {
+            /*
             instance = new ClassWithMarshalingRoutines();
             System.EventHandler<int> s = (object sender, int value) => z2 = value;
             instance.IntPropertyChanged += s;
@@ -28,8 +29,10 @@ namespace Benchmarks
                     z4 = value * 3;
             };
             instance2.IntPropertyChanged += s2;
+            */
         }
 
+        /*
         [Benchmark]
         public object IntEventOverhead()
         {
@@ -99,5 +102,6 @@ namespace Benchmarks
             return instance;
             GC.KeepAlive(s);
         }
+        */
     }
 }

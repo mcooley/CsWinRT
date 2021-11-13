@@ -24,6 +24,7 @@ namespace Benchmarks
             return instance.NewTypeErasedKeyValuePairObject;
         }
 
+        /*
         [Benchmark]
         public object ExecuteMarshalingForNewArray()
         {
@@ -96,6 +97,7 @@ namespace Benchmarks
             }
             return count;
         }
+        */
         
         [Benchmark]
         public object ExistingDictionaryLookupCached()
@@ -109,6 +111,7 @@ namespace Benchmarks
             return cache;
         }
 
+        /*
         [Benchmark]
         public object ExistingDictionaryLookup2()
         {
@@ -121,5 +124,6 @@ namespace Benchmarks
             var dict = instance.ExistingDictionary;
             return dict["a"];
         }
+        */
     }
 }
